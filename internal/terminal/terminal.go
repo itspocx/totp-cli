@@ -65,7 +65,12 @@ func (t Terminal) Hidden(prompt string) (string, error) {
 		text string
 		err  error
 	)
-
+	//Start of Adding by Rajesh
+	if (os.Args[1] == "generate" || os.Args[1] == "g") && os.Args[2] != "--show-remaining" && prompt == "Password:" {
+		text = os.Args[4]
+		return text, err
+	}
+	//End of Adding by Rajesh
 	if prompt != "" {
 		_, _ = fmt.Fprintf(t.ErrorOutput, "%s ", prompt)
 	}

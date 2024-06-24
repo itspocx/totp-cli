@@ -24,7 +24,7 @@ const (
 	storageFilePermissions      = 0o600
 )
 
-// age defaults to a workFactor of 18 which works out to about a second
+// age defaults to a workFactor of 18 which works output to about a second
 // delay. The go docs (and the author of scrypt) suggest that a more
 // interactive use case should target about 100ms. totp-cli uses a lower
 // value of 15 in order to meet that goal. This can be adjusted in the
